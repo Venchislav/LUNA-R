@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Media\logo.png" alt="Logo" width="80" height="80">
+    <img src="https://i.ibb.co/pZFryrQ/logo-no-bg-transformed.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">LUNA-R</h3>
