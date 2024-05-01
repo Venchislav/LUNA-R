@@ -16,4 +16,19 @@ ___
 ### Modifiers V 0.01!
 <img src='https://i.ibb.co/D7mFjp9/wrench.png' width=8%> <br>
 <h4>Created Modifier Class: </h4><br>
+
 - EarlyStoppingModifier (Interrupts fitting process to avoid overfitting)
+___
+
+01.04.2024
+
+___
+
+### Logistic Regression On Board!
+
+<img src='https://i.ibb.co/vVTMbCr/curve.png' width=8%><br>
+<h4>Implemented Logistic Regression Model v0.01!</h4><br>
+Supports: <br>
+
+- Regularization
+- CrossEntropy Loss
