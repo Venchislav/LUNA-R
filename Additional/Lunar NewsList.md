@@ -20,7 +20,7 @@ ___
 - EarlyStoppingModifier (Interrupts fitting process to avoid overfitting)
 ___
 
-01.04.2024
+01.05.2024
 
 ___
 
@@ -32,3 +32,11 @@ Supports: <br>
 
 - Regularization
 - CrossEntropy Loss
+
+___
+
+03.05.2024
+
+___
+
+### Main Started!
