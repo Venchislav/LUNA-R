@@ -5,7 +5,7 @@ ___
 
 29.04.2024
 ___
-### Lunar Development Started!
+### LUNA-R Development Started!
 
 - Linear Regression v 0.01
 - Losses v 0.01 (mae, mse)
@@ -40,3 +40,20 @@ ___
 ___
 
 ### Main Started!
+
+___
+
+04.05.2024
+
+___
+
+### LUNA-R Main Growth!
+LUNA-R Main system is improving spreading to different components and submodules.<br>
+Dev Team (1 person bruh) trying to build flexible architecture.<br>
+Of course LUNA-R is not new Scikit Learn, but these are just first versions.<br>
+News: <br>
+- Linear Regression and Logistic Regression are now V 0.002
+  - Details:<br> More Flexible <br> Loss Output added <br> Bug Fix
+- Components:
+  - Optimizers, Losses and more!
+<img src='https://i.ibb.co/pL9Tbbn/thinking.png' width=10%>
