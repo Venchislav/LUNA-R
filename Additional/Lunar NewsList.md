@@ -57,3 +57,18 @@ News: <br>
 - Components:
   - Optimizers, Losses and more!
 <img src='https://i.ibb.co/pL9Tbbn/thinking.png' width=10%>
+
+___
+
+05.05.2024
+
+___
+
+### Model Main Class!
+LUNA-R is positioned not only as Framework with ready-to-use models, but also as an educational material in form of ML Framework<br>
+##### Introducing: <br>
+MODEL!<br>
+Not a big update, but it makes development process easier and model files cleaner. <br>
+All routine actions already implemented in Model class! <br>
+
+<img src='https://i.ibb.co/3pcfZzS/programming.png' width=8%>
