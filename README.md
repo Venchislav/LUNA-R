@@ -30,6 +30,8 @@ ___
 * Python 3.
 * NumPy.
 * MatplotLib.
+* Seaborn (optional. Used in components)
+* Pandas (optional. Used in components)
 
 ## Usage
 
