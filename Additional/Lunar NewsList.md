@@ -72,3 +72,15 @@ Not a big update, but it makes development process easier and model files cleane
 All routine actions already implemented in Model class! <br>
 
 <img src='https://i.ibb.co/3pcfZzS/programming.png' width=8%>
+
+___
+
+06.05.2024
+
+___
+
+### LUNA-R Minor Updates.
+#### Confusion Matrix<br>
+Build confusion matricies, analyze, visualize!<br>
+Confusion Matricies and Metrics 0.001! <br>
+<img src='https://i.ibb.co/KLPmgbT/math.png' width=8%>
