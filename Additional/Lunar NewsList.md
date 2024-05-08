@@ -84,3 +84,18 @@ ___
 Build confusion matricies, analyze, visualize!<br>
 Confusion Matricies and Metrics 0.001! <br>
 <img src='https://i.ibb.co/KLPmgbT/math.png' width=8%>
+
+___
+
+08.05.2024
+
+___
+
+### LUNA-R really minor Updates.
+#### Metrics added<br>
+- Precision
+- Recall
+- F1-Score
+<br>--------------<br>
+LUNA-R Decision Trees are coming btw...<br>
+<img src='https://i.ibb.co/rs8xMJS/sakura.png' width=8%>
