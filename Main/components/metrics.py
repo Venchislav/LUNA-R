@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sns
 
 
+# Confusion Matricies!
 def confusion_matrix(y_true, y_pred):
     tp, tn, fp, fn = 0, 0, 0, 0
 
@@ -26,6 +27,22 @@ def plot_confusion_matrix(matrix):
     sns.heatmap(matrix, annot=True)
     plt.show()
 
+
+def precision_recall(confusion_matrix):
+    tp = confusion_matrix[0][0]
+    fp = confusion_matrix[0][1]
+    fn = confusion_matrix[1][0]
+
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+
+    return precision, recall
+
+
+def f_1_score(confusion_matrix):
+    prec, rec = precision_recall(confusion_matrix)
+
+    return 2 * prec * rec / (prec + rec)
 
 matrix = confusion_matrix([1, 1, 0, 0, 1], [1, 0, 0, 1, 1])
 plot_confusion_matrix(matrix)
