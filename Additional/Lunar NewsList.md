@@ -24,7 +24,7 @@ ___
 
 ___
 
-### Logistic Regression On Board!
+## Logistic Regression On Board!
 
 <img src='https://i.ibb.co/vVTMbCr/curve.png' width=8%><br>
 <h4>Implemented Logistic Regression Model v0.01!</h4><br>
@@ -47,7 +47,7 @@ ___
 
 ___
 
-### LUNA-R Main Growth!
+## LUNA-R Main Growth!
 LUNA-R Main system is improving spreading to different components and submodules.<br>
 Dev Team (1 person bruh) trying to build flexible architecture.<br>
 Of course LUNA-R is not new Scikit Learn, but these are just first versions.<br>
@@ -98,4 +98,33 @@ ___
 - F1-Score
 <br>--------------<br>
 LUNA-R Decision Trees are coming btw...<br>
+
+___
+
+09.05.2024
+
+___
+
+## LUNA-R Big Update!
+### Decision Tree V 0.01!
+<br>
+One of the:
+
+- best
+- most popular
+- most useful
+
+ML algorithms on board! <br>
+
+Really different from previous<br>
+But still great!<br>
+
+All math functions and so on on board!<br>
+
+Oh and...<br>
+
+Last, but not Least...<br>
+### Examples!<br>
+
+Examples are pieces of code that you can examine and check out in order to understand framework and see its practical usage<br>
 <img src='https://i.ibb.co/rs8xMJS/sakura.png' width=8%>
