@@ -2,7 +2,7 @@ import Main.configurations.cfg as cfg
 
 from Main.tools.validator import validate_input
 from Main.tools.funcs import sigmoid
-from main_classes import Model, Node
+from Main.models.main_classes import Model, Node
 
 import numpy as np
 from collections import Counter
@@ -128,4 +128,5 @@ class DecisionTree:
             return self.traverse_tree(x, node.left)
         return self.traverse_tree(x, node.right)
 
-# holy fucking shit...
+
+# simple decision tree test:
