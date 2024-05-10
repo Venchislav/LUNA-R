@@ -93,3 +93,88 @@ class DecisionTreeClassifier:
         if x[node.feature] <= node.threshold:
             return self.traverse_tree(x, node.left)
         return self.traverse_tree(x, node.right)
+
+
+class DecisionTreeRegressor:
+    def __init__(self, max_depth=50, min_samples_split=2):
+        self.max_depth = max_depth
+        self.min_samples_split = min_samples_split
+        self.root = None
+
+    def fit(self, X, y):
+        self.root = self.grow(X, y)
+
+    def grow(self, X, y, depth=0):
+        n_samples, n_features = X.shape
+        if depth == self.max_depth or n_samples < self.min_samples_split or np.all(y == y[0]):
+            return Node(value=np.mean(y))
+
+        # Find the best split
+        split_feature, split_threshold = self._find_best_split(X, y)
+
+        if split_feature is None:
+            return Node(value=np.mean(y))
+
+        left_indices = X[:, split_feature] < split_threshold
+        right_indices = ~left_indices
+
+        left_subtree = self.grow(X[left_indices], y[left_indices], depth + 1)
+        right_subtree = self.grow(X[right_indices], y[right_indices], depth + 1)
+
+        return Node(split_feature, split_threshold, left_subtree, right_subtree)
+
+    def _find_best_split(self, X, y):
+        best_mse = float('inf')
+        best_feature = None
+        best_threshold = None
+
+        n_samples, n_features = X.shape
+
+        for feature_idx in range(n_features):
+            thresholds = np.unique(X[:, feature_idx])
+
+            for threshold in thresholds:
+                left_indices = X[:, feature_idx] < threshold
+                right_indices = ~left_indices
+
+                if np.sum(left_indices) < 2 or np.sum(right_indices) < 2:
+                    continue
+
+                mse = self._calculate_mse(y[left_indices], y[right_indices])
+                if mse < best_mse:
+                    best_mse = mse
+                    best_feature = feature_idx
+                    best_threshold = threshold
+
+        return best_feature, best_threshold
+
+    def _calculate_mse(self, left_targets, right_targets):
+        left_variance = np.var(left_targets)
+        right_variance = np.var(right_targets)
+        return (len(left_targets) * left_variance + len(right_targets) * right_variance) / (len(left_targets) + len(right_targets))
+
+    def predict(self, X):
+        return np.array([self.traverse(x, self.root) for x in X])
+
+    def traverse(self, x, node):
+        if node.is_leaf_node():
+            return node.value
+        else:
+            if x[node.feature] < node.threshold:
+                return self.traverse(x, node.left)
+            else:
+                return self.traverse(x, node.right)
+
+
+np.random.seed(42)
+X = np.random.rand(100, 2) * 10
+y = 3 * X[:, 0] - 2 * X[:, 1] + 1 + np.random.randn(100)
+
+
+regressor = DecisionTreeRegressor()
+regressor.fit(X, y)
+
+y_pred = regressor.predict(X)
+
+print(y)
+print(y_pred)
