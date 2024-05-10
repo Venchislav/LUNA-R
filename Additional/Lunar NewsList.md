@@ -128,3 +128,27 @@ Last, but not Least...<br>
 
 Examples are pieces of code that you can examine and check out in order to understand framework and see its practical usage<br>
 <img src='https://i.ibb.co/rs8xMJS/sakura.png' width=8%>
+
+___
+
+10.05.2024
+
+___
+
+# LUNA-R MASSIVE UPDATE!
+### Architecture Changed!<br>
+Project had a simple architecture scheme:<br>
+Classification and regression files<br>
+Meaning models were splitted by problem they solve<br>
+<br>
+Now architecture changed splitting data by model type!<br>
+### New Models!<br>
+- DecisionTreeRegressor
+- RandomForestRegressor
+- RandomForestClassifier
+
+It's freakin' amazing that we have 3 new models in 1 update!<br>
+See ya👋!<br>
+<img src='https://i.ibb.co/kBnmYJj/forest.png' width=8%>
+<img src='https://i.ibb.co/FKC3d3F/cloud-1.png' width=8%>
+<img src='https://i.ibb.co/3pLk0TJ/line-chart.png' width=8%>
