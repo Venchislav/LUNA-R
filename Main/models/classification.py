@@ -156,7 +156,7 @@ class RandomForest:
 
     def sample_with_replacement_data(self, X, y):
         samples = X.shape[0]
-        random_indices = np.random.choice(samples, samples)  # by default replace is True
+        random_indices = np.random.choice(samples, int(samples ** 0.5))  # by default replace is True
 
         return X[random_indices], y[random_indices]
 
