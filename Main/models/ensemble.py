@@ -2,6 +2,7 @@ from Main.models.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from Main.models.main_classes import Node
 import numpy as np
 import warnings
+
 warnings.filterwarnings('ignore')
 
 
@@ -79,6 +80,40 @@ class RandomForestRegressor:
         return predictions
 
 
+class GradientBoostingClassifier:
+    def __init__(self, min_samlpes_split=1, max_depth=3, n_estimators=10, threshold=0.5):
+
+        self.max_depth_ = max_depth
+        self.min_samlpes_split = min_samlpes_split
+        self.n_estimators = n_estimators
+        self.threshold_ = threshold
+
+    def fit(self, X, y, lr=0.8):
+        self.estimators = []
+        self.earlier_predictions = np.log(list(y).count(1) / list(y).count(0))
+
+        for i in range(self.n_estimators):
+            tree = DecisionTreeRegressor(max_depth=self.max_depth_, min_samples_split=self.min_samlpes_split)
+
+            residuals = y - self.earlier_predictions
+            tree.fit(X, residuals)
+
+            self.estimators.append(tree)
+
+            self.earlier_predictions += lr * tree.predict(X)
+
+    def predict(self, X):
+        trees_predictions = np.empty((len(X), len(self.estimators)))
+
+        for i, tree in enumerate(self.estimators):
+            trees_predictions[:, i] = tree.predict(X)
+
+        predictions = np.sum(trees_predictions, axis=1)
+        predictions = np.float64(predictions >= self.threshold_)
+
+        return predictions
+
+
 class GradientBoostingRegressor:
     def __init__(self, n_estimators, max_depth=50, min_samples_split=2):
         self.n_estimators = n_estimators
@@ -92,7 +127,7 @@ class GradientBoostingRegressor:
         self.earlier_predictions = np.ones(len(y)) * np.mean(y)
 
         for t in range(self.n_estimators):
-            print(f'Fitting {t}/{self.n_estimators} tree')
+            print(f'Fitting {t + 1}/{self.n_estimators} tree')
 
             residuals = y - self.earlier_predictions
 
@@ -105,19 +140,3 @@ class GradientBoostingRegressor:
 
     def predict(self, X):
         return np.sum(self.lr * tree.predict(X) for tree in self.estimators) + np.mean(y)
-
-
-np.random.seed(42)
-X = np.random.rand(100, 2) * 10
-y = 3 * X[:, 0] - 2 * X[:, 1] + 1 + np.random.randn(100)
-
-regressor = GradientBoostingRegressor(n_estimators=100)
-regressor.fit(X, y)
-
-y_pred = regressor.predict(X)
-
-print(y)
-print('-------')
-print(y_pred)
-
-# That is fucking insane!!!!!!!!
