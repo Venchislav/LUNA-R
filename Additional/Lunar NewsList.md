@@ -152,3 +152,19 @@ See ya👋!<br>
 <img src='https://i.ibb.co/kBnmYJj/forest.png' width=8%>
 <img src='https://i.ibb.co/FKC3d3F/cloud-1.png' width=8%>
 <img src='https://i.ibb.co/3pLk0TJ/line-chart.png' width=8%>
+
+___
+
+11.05.2024
+
+___
+
+## LUNA-R Big Update!
+### Meet GradientBoostings!
+GradientBoostingRegressor and GradientBoostingClassifier are now available in ensembles!<br>
+We're super excited to present this powerful and efficient sequential algorithm<br>
+
+GradientBoosting expands and increases possiblilities of simple Decision Trees<br>
+Enjoy Regression and Classification with LUNA-R GradientBoosted algorithms!<br>
+<img src='https://i.ibb.co/kBnmYJj/forest.png' width=8%>
+<img src='https://i.ibb.co/mGLWfvq/boost.png' width=8%>
