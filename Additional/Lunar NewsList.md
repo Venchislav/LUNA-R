@@ -168,3 +168,28 @@ GradientBoosting expands and increases possiblilities of simple Decision Trees<b
 Enjoy Regression and Classification with LUNA-R GradientBoosted algorithms!<br>
 <img src='https://i.ibb.co/kBnmYJj/forest.png' width=8%>
 <img src='https://i.ibb.co/mGLWfvq/boost.png' width=8%>
+
+___
+
+12.05.2024
+
+___
+
+## LUNA-R... A lot of news😞
+Let's start with Good News:<br>
+### KMeans Clustering V 0.01 is now available!🎉
+It doesn't only mean that this algorithm is implemented, but it also signs that LUNA-R now can solve Unsupervised Learning!!!<br>
+That's really, really cool!<br>
+**See details im models/clustering**
+<br>
+### Bad News...
+Thankfully it's not about LUNA-R.<br>
+### My GitHub profile was suspended😭
+Some *not good man tried to sign in to my profile.<br>
+GitHub noticed it and temporary blocked me.<br>
+I mean... I can use my profile, but nobody else can see it and even read!<br>
+Now my profile redirects to 404(bruh)<br>
+I already wrote a request to GitHub support Team (8 hours ago) but didn't get any response<br>
+Despite the fact that it broke me a bit I'll continue to work, as LUNA-R must be finished!💪<br>
+Hope for help from GitHub team<br>
+Peace💖
